@@ -43,12 +43,31 @@
 
 //BMI
 
-var bmi= function(weight, height) {
-return (703 * weight / Math.pow(height,2));
+// var bmi= function(weight, height) {
+// return (703 * weight / Math.pow(height,2));
+// };
+//
+// var weight = parseFloat(prompt("Enter your weight in pounds:"));
+// var height = parseFloat(prompt("Enter your height in inches:"));
+// var result = bmi(weight, height);
+//
+// alert(result.toFixed(2));
+
+var convertCelsius = function(fahrenheit) {
+return ((fahrenheit - 32) / 1.8);
 };
 
-var weight = parseFloat(prompt("Enter your weight in pounds:"));
-var height = parseFloat(prompt("Enter your height in inches:"));
-var result = bmi(weight, height);
+var fahrenheit = parseFloat(prompt("Enter the temperature in degrees fahrenheit:"));
 
-alert(result.toFixed(2));
+var resultC = convertCelsius(fahrenheit);
+
+alert("Your temperature in celsius is " + resultC);
+
+var convertFahrenheit = function(celsius) {
+  return (celsius * 1.8 + 32);
+};
+var celsius = parseFloat(prompt("Enter the temperature in degrees celsius:"));
+
+var resultF = convertFahrenheit(celsius);
+
+alert("Your temperature in fahrenheight is " + resultF);
