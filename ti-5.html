@@ -2,9 +2,32 @@
 <html>
   <head>
     <title>Calculator</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>Calculator</h1>
-    <script src="js/scripts.js"></script>
+    <div class="container">
+      <h1>Calculator</h1>
+      <form id="compute">
+        <div class="form-group">
+          <label for="number1">1st number:</label>
+          <input id="number1" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="number2">2nd number:</label>
+          <input id="number2" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn-info">Add!</button>
+        <button type="submit" class="btn-success">Subtract!</button>
+        <button type="submit" class="btn-danger">Multiply!</button>
+        <button type="submit" class="btn-warning">Divide!</button>
+      </form>
+      <br>
+      <div>
+        <p>This is your answer: <span id="output"></span> </p>
+      </div>
+    </div>
   </body>
 </html>
